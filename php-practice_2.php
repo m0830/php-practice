@@ -1,6 +1,5 @@
 <?php
 // Q1 tic-tac問題
-<?php
 
 for ($i=1; $i<=100; ++$i) {
     echo PHP_EOL;

@@ -1,6 +1,5 @@
 <?php
 // Q1 変数と文字列
-<?php 
 
  $message = '私の名前は「伊東」です。';
  echo $message;
