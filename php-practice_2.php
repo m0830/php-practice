@@ -3,17 +3,15 @@
 
 for ($i=1; $i<=100; ++$i) {
     echo PHP_EOL;
-if ($i % 4 == 0 || $i % 5 == 0){
     if ($i % 4 == 0 && $i % 5 == 0) {
         echo 'tic-tac';
     } elseif (($i % 4) == 0){
         echo 'tic';
     } elseif (($i % 5) == 0) {
         echo 'tac';
-    } 
-}  else {
-    echo $i;
-}
+    } else {
+        echo $i;
+    }
 }
 
 ?>

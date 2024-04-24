@@ -40,23 +40,31 @@ if ($device === 'windows' || $device === 'mac') {
 // Q5 条件分岐-2 三項演算子
 <?php
 
-$age = 18;
 
-if ($age >= 18) {
-    echo '成人です。';
-} else {
-    echo '未成年です。';
+$age = 10;
 
-}
+$message = ($age >= 18) ? '成人です。' : '未成年です。';
+
+echo $message;
 
 ?>
 
 // Q6 配列
 <?php
 
-$prefectures = ['東京都', '神奈川県', '山梨県', '栃木県', '千葉県', '埼玉県', '群馬県', '茨城県', '山梨県'];
+$prefectures = [
+    '東京都', 
+    '神奈川県', 
+    '山梨県', 
+    '栃木県', 
+    '千葉県', 
+    '埼玉県', 
+    '群馬県', 
+    '茨城県', 
+    '山梨県'
+];
 
-echo "$prefectures[3]と$prefectures[4]は関東地方の都道府県です。"
+echo "$prefectures[2]と$prefectures[3]は関東地方の都道府県です。"
 
 ?>
 
@@ -70,10 +78,11 @@ $prefectures = [
     '埼玉県' => 'さいたま市',
     '栃木県' => '宇都宮市',
     '群馬県' => '前橋市',
-    '茨城県' => '水戸市', ];
+    '茨城県' => '水戸市'
+];
     
 foreach ($prefectures as $prefecture => $city) {
-    echo $city."\n";
+    echo $city . "\n";
 }
     
 ?>
@@ -93,8 +102,8 @@ $prefectures = [
     
 foreach ($prefectures as $prefecture => $city) {
     if ($prefecture === "埼玉県") {
-    echo "{$prefecture}の県庁所在地は、{$city}です。";
-  }
+        echo "{$prefecture}の県庁所在地は、{$city}です。";
+    }
 }
 
 ?>
@@ -102,22 +111,15 @@ foreach ($prefectures as $prefecture => $city) {
 // Q9 連想配列-3
 <?php
 
-$prefectures = [
-    '東京都' => '新宿区',
-    '神奈川県' => '横浜市',
-    '千葉県' => '千葉市',
-    '埼玉県' => 'さいたま市',
-    '栃木県' => '宇都宮市',
-    '群馬県' => '前橋市',
-    '茨城県' => '水戸市', 
-    '愛知県' => '名古屋市', 
-    '大阪府' => '大阪市', ];
+$prefectures['愛知県'] = '名古屋市';
+$prefectures['大阪府'] = '大阪市';
+
 foreach ($prefectures as $prefecture => $city) {
     if ($city === '名古屋市' || $city === '大阪市'){
         echo $prefecture . 'は関東地方ではありません。' ."\n";
     } else {
         echo "{$prefecture}の県庁所在地は、{$city}です。" ."\n";
-}
+    }
 }
 
 ?>
@@ -141,14 +143,17 @@ echo hello('安藤');
 
 $price = 1000;
 
-function calcTaxInPrice($price)
+function calcTaxInPrice($taxOutPrice)
 {
-    return $price * 1.1;
+    return $taxOutPrice * 1.1;
 }
 
-echo $price . 'の商品の税込価格は' . calcTaxInPrice($price) . '円です。';
+$taxInPrice = calcTaxInPrice($price);
+
+echo $price . 'の商品の税込価格は' . $taxInPrice . '円です。';
 
 ?>
+
 
 // Q12 関数とif文
 <?php
@@ -157,7 +162,7 @@ function distinguishNum($num) {
     if ($num % 2 === 1) {
         return $num . 'は奇数です。' ."\n";
     } else {
-        return $num . 'は偶数です。';
+        return $num . 'は偶数です。' . "\n";
     }
 }
 
@@ -178,7 +183,7 @@ switch ($string) {
         break;
 
     case 'C':  
-        return '合格ですが追加課題があります。' . '\n';
+        return '合格ですが追加課題があります。' . "\n";
         break;
 
     case 'D':
