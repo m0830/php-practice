@@ -1,15 +1,16 @@
 <?php
 // Q1 変数と文字列
 
- $message = '私の名前は「伊東」です。';
- echo $message;
- 
+$name = '伊東';
+$message = '私の名前は「' . $name . '」です。';
+echo $message;
+
 ?>
 
 // Q2 四則演算
 <?php 
 
- $num = 5*4;
+ $num = 5 * 4;
  
  echo $num . "\n";
  
@@ -29,9 +30,9 @@
 $device = 'mac';
 
 if ($device === 'windows' || $device === 'mac') {
-    echo"使用OSは、{$device}です。";
+    echo "使用OSは、{$device}です。";
 } else {
-        echo'どちらでもありません。';
+    echo 'どちらでもありません。';
     }
 
 ?>
